@@ -7,6 +7,13 @@ import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
+function getAge(): number {
+  const now = new Date()
+  let age = now.getFullYear() - 2003
+  if (now < new Date(now.getFullYear(), 7, 3)) age--
+  return age
+}
+
 export default function Hero() {
   const heroRef      = useRef<HTMLElement>(null)
   const cardRef      = useRef<HTMLDivElement>(null)
@@ -131,7 +138,7 @@ export default function Hero() {
 
           <div className="hero-card-bottom">
             <p className="hero-card-portfolio">Portfolio</p>
-            <div className="hero-card-year">&apos;22</div>
+            <div className="hero-card-year">&apos;{getAge()}</div>
           </div>
         </div>
       </div>

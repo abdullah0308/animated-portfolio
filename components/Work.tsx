@@ -13,28 +13,28 @@ const projects = [
     title: 'E-Commerce Platform',
     stack: 'WordPress · WooCommerce',
     type: 'E-Commerce',
-    img: '/images/E-Commerce Website.jpeg',
+    img: '/images/E-Commerce Website.png',
   },
   {
     num: '02',
     title: 'Corporate Website',
     stack: 'Next.js · Payload CMS',
     type: 'Corporate',
-    img: '/images/Corporate Website.jpeg',
+    img: '/images/Corporate Website.png',
   },
   {
     num: '03',
     title: 'Archery Club Web App',
     stack: 'Next.js · TypeScript · PostgreSQL',
     type: 'Web App',
-    img: '/images/Archery Web App.jpeg',
+    img: '/images/Archery Web App.png',
   },
   {
     num: '04',
     title: 'Multilingual Websites',
     stack: 'WordPress · WPML',
     type: 'Multilingual',
-    img: '/images/Multilingual Websites.jpeg',
+    img: '/images/Multilingual Websites.png',
   },
 ]
 
