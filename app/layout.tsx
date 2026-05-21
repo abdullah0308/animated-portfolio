@@ -5,6 +5,9 @@ import SmoothScroll from '@/components/SmoothScroll'
 export const metadata: Metadata = {
   title: 'Abdullah Mohamed | Junior Developer',
   description: 'Always Calibrating. Junior Developer based in Mauritius.',
+  icons: {
+    icon: '/images/AM Web Logo.svg',
+  },
 }
 
 export default function RootLayout({
