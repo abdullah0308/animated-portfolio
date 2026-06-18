@@ -1,15 +1,15 @@
-import Nav         from '@/components/Nav'
-import Hero        from '@/components/Hero'
-import Statement   from '@/components/Statement'
-import Work        from '@/components/Work'
-import About       from '@/components/About'
-import Closing     from '@/components/Closing'
-import Cursor        from '@/components/Cursor'
-import CursorReveal  from '@/components/CursorReveal'
-import MenuOverlay from '@/components/MenuOverlay'
-import Preloader   from '@/components/Preloader'
-import ProgressBar from '@/components/ProgressBar'
-import FloatingLabel from '@/components/FloatingLabel'
+import Nav              from '@/components/Nav'
+import ThreeHero        from '@/components/ThreeHero'
+import Statement        from '@/components/Statement'
+import HorizontalScroll from '@/components/HorizontalScroll'
+import About            from '@/components/About'
+import Closing          from '@/components/Closing'
+import Cursor           from '@/components/Cursor'
+import CursorReveal     from '@/components/CursorReveal'
+import MenuOverlay      from '@/components/MenuOverlay'
+import Preloader        from '@/components/Preloader'
+import ProgressBar      from '@/components/ProgressBar'
+import FloatingLabel    from '@/components/FloatingLabel'
 
 export default function Home() {
   return (
@@ -22,9 +22,9 @@ export default function Home() {
       <MenuOverlay />
       <Nav />
       <main>
-        <Hero />
+        <ThreeHero />
         <Statement />
-        <Work />
+        <HorizontalScroll />
         <About />
         <Closing />
       </main>
