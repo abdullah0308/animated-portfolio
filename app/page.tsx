@@ -2,10 +2,10 @@ import Nav         from '@/components/Nav'
 import Hero        from '@/components/Hero'
 import Statement   from '@/components/Statement'
 import Work        from '@/components/Work'
-import Process     from '@/components/Process'
 import About       from '@/components/About'
 import Closing     from '@/components/Closing'
-import Cursor      from '@/components/Cursor'
+import Cursor        from '@/components/Cursor'
+import CursorReveal  from '@/components/CursorReveal'
 import MenuOverlay from '@/components/MenuOverlay'
 import Preloader   from '@/components/Preloader'
 import ProgressBar from '@/components/ProgressBar'
@@ -18,13 +18,13 @@ export default function Home() {
       <ProgressBar />
       <FloatingLabel />
       <Cursor />
+      <CursorReveal />
       <MenuOverlay />
       <Nav />
       <main>
         <Hero />
         <Statement />
         <Work />
-        <Process />
         <About />
         <Closing />
       </main>

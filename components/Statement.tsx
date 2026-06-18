@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const quoteLines = ['More than projects,', 'pieces of my journey.']
+const quoteLines = ['More than tools,', 'shaped through real work.']
 const dividers   = ['Aim with precision.', 'Release with intention.']
 
 export default function Statement() {
@@ -93,7 +93,8 @@ export default function Statement() {
     <section className="statement" ref={sectionRef}>
       <div className="stmt-stage" ref={stageRef}>
 
-        <div className="stmt-quote" ref={quoteRef}>
+        <div className="stmt-quote" ref={quoteRef}
+             data-crv data-crv-text={quoteLines.join('\n')}>
           {quoteLines.map((line, i) => (
             <span key={i} className="stmt-qline">
               <span>{line}</span>
@@ -106,14 +107,16 @@ export default function Statement() {
             style={{ objectFit: 'cover' }} />
         </div>
 
-        <p className="stmt-divider" ref={div1Ref}>{dividers[0]}</p>
+        <p className="stmt-divider" ref={div1Ref}
+           data-crv data-crv-text={dividers[0]}>{dividers[0]}</p>
 
         <div className="stmt-img" ref={img2Ref}>
           <Image src="/images/Atmosphere 2.jpg" alt="Atmosphere 2" fill
             style={{ objectFit: 'cover' }} />
         </div>
 
-        <p className="stmt-divider" ref={div2Ref}>{dividers[1]}</p>
+        <p className="stmt-divider" ref={div2Ref}
+           data-crv data-crv-text={dividers[1]}>{dividers[1]}</p>
 
         <div className="stmt-img" ref={img3Ref}>
           <Image src="/images/Atmosphere 3.jpg" alt="Atmosphere 3" fill

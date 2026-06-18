@@ -61,7 +61,7 @@ export default function MenuOverlay() {
       </div>
 
       <nav className="menu-nav">
-        <a href="#work"    onClick={closeMenu}><span>Work</span></a>
+        <a href="#skills"  onClick={closeMenu}><span>Skills</span></a>
         <a href="#about"   onClick={closeMenu}><span>About</span></a>
         <a href="mailto:hello@abdullah-m.dev"><span>Reach out</span></a>
       </nav>

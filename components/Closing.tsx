@@ -80,7 +80,7 @@ export default function Closing() {
         <div className="cl-main">
           {mainLines.map((line, i) => (
             <div key={i} className="cl-line-wrap">
-              <span className="cl-line">{line}</span>
+              <span className="cl-line" data-crv data-crv-text={line}>{line}</span>
             </div>
           ))}
         </div>
@@ -109,7 +109,8 @@ export default function Closing() {
             aria-label="Kickstart your next project"
           >
             <div className="cl-cta-wrap">
-              <h2 className="cl-cta-text">Get in touch.</h2>
+              <h2 className="cl-cta-text"
+                  data-crv data-crv-text="Get in touch.">Get in touch.</h2>
             </div>
             <span className="cl-cta-underline" aria-hidden="true" />
           </a>

@@ -3,38 +3,27 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Image from 'next/image'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const projects = [
+const skillGroups = [
   {
     num: '01',
-    title: 'E-Commerce Platform',
-    stack: 'WordPress · WooCommerce',
-    type: 'E-Commerce',
-    img: '/images/E-Commerce Website.png',
+    label: 'Skills',
+    title: 'Frontend',
+    items: ['Next.js', 'TypeScript', 'React', 'HTML / CSS'],
   },
   {
     num: '02',
-    title: 'Corporate Website',
-    stack: 'Next.js · Payload CMS',
-    type: 'Corporate',
-    img: '/images/Corporate Website.png',
+    label: 'Skills',
+    title: 'CMS & Backend',
+    items: ['WordPress', 'WooCommerce', 'Payload CMS', 'PostgreSQL'],
   },
   {
     num: '03',
-    title: 'Archery Club Web App',
-    stack: 'Next.js · TypeScript · PostgreSQL',
-    type: 'Web App',
-    img: '/images/Archery Web App.png',
-  },
-  {
-    num: '04',
-    title: 'Multilingual Websites',
-    stack: 'WordPress · WPML',
-    type: 'Multilingual',
-    img: '/images/Multilingual Websites.png',
+    label: 'Skills',
+    title: 'Other',
+    items: ['WPML / Multilingual', 'Clean code & performance'],
   },
 ]
 
@@ -46,7 +35,7 @@ export default function Work() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const N     = projects.length
+      const N     = skillGroups.length
       const STEPS = N - 1
 
       const infoLayers = gsap.utils.toArray<HTMLElement>('.work-layer')
@@ -122,41 +111,37 @@ export default function Work() {
   }, [])
 
   return (
-    <section id="work" ref={sectionRef}>
+    <section id="skills" ref={sectionRef}>
       <div className="work-stage" ref={stageRef}>
 
         {/* Left — info column */}
         <div className="work-info-col">
-          {projects.map((p, i) => (
-            <div key={p.num} className="work-layer">
-              <span className="work-ghost" aria-hidden="true">{p.num}</span>
+          {skillGroups.map((s) => (
+            <div key={s.num} className="work-layer">
+              <span className="work-ghost" aria-hidden="true">{s.num}</span>
               <div className="work-layer-content">
                 <div className="work-slot-wrap">
-                  <span className="work-eyebrow work-slot">{p.type}</span>
+                  <span className="work-eyebrow work-slot">{s.label}</span>
                 </div>
                 <div className="work-slot-wrap">
-                  <h2 className="work-title work-slot">{p.title}</h2>
+                  <h2 className="work-title work-slot">{s.title}</h2>
                 </div>
                 <div className="work-slot-wrap">
-                  <p className="work-stack work-slot">{p.stack}</p>
+                  <p className="work-stack work-slot">{s.items.join(' · ')}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Right — image column */}
+        {/* Right — skill items column */}
         <div className="work-img-col">
-          {projects.map((p, i) => (
-            <div key={p.num} className="work-img-layer">
-              <div className="work-img-inner">
-                <Image
-                  src={p.img}
-                  alt={p.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  priority={i === 0}
-                />
+          {skillGroups.map((s) => (
+            <div key={s.num} className="work-img-layer">
+              <div className="skill-items-display">
+                {s.items.map((item) => (
+                  <span key={item} className="skill-item">{item}</span>
+                ))}
               </div>
             </div>
           ))}

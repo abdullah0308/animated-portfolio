@@ -34,13 +34,7 @@ export default function AmbientOrb() {
 
     const triggers = [
       ScrollTrigger.create({
-        trigger: '#work',
-        start: 'top center',
-        onEnter:     () => moveTo('28vw'),
-        onEnterBack: () => moveTo('28vw'),
-      }),
-      ScrollTrigger.create({
-        trigger: '.process',
+        trigger: '#skills',
         start: 'top center',
         onEnter:     () => moveTo('28vw'),
         onEnterBack: () => moveTo('28vw'),
@@ -70,7 +64,7 @@ export default function AmbientOrb() {
         onEnterBack: () => moveTo('8vw'),
       }),
       ScrollTrigger.create({
-        trigger: '#work',
+        trigger: '#skills',
         start: 'top center',
         onLeaveBack: () => moveTo('0vw'),
       }),
