@@ -9,7 +9,7 @@ export default function Nav() {
 
       <div className="nav-right">
         <ul className="nav-links">
-          <li><a href="#work">Playground</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="https://www.linkedin.com/in/abdullah-mohamed-05426931a/" target="_blank" rel="noopener">Reach out</a></li>
         </ul>
